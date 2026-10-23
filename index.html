@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mount Peter PDA – Make Your Submission</title>
+<style>
+:root{--bg:#f6f7f4;--card:#fff;--ink:#1d2a24;--mute:#5b6a62;--line:#d9dfd9;--acc:#1f6b4f;--accink:#fff;--warn:#fff4d6;--warnink:#5a4300;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a16;--card:#1a2420;--ink:#e8efe9;--mute:#9db0a5;--line:#2c3a33;--acc:#4fb98c;--accink:#0b1410;--warn:#3a2f10;--warnink:#f3d98a}}
+:root[data-theme="dark"]{--bg:#121a16;--card:#1a2420;--ink:#e8efe9;--mute:#9db0a5;--line:#2c3a33;--acc:#4fb98c;--accink:#0b1410;--warn:#3a2f10;--warnink:#f3d98a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.5rem;margin:0 0 4px}h2{font-size:1.05rem;margin:0 0 10px}
+.sub{color:var(--mute);margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+label{display:block;font-weight:600;font-size:.9rem;margin:10px 0 4px}
+input[type=text],input[type=email],select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+textarea{resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}
+.chk:first-of-type{border-top:0}
+.chk input{margin-top:5px;flex:none;width:18px;height:18px}
+.chk span{font-size:.95rem}.chk b{display:block}
+.chk small{color:var(--mute)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+button,a.btn{appearance:none;border:1px solid var(--acc);background:var(--acc);color:var(--accink);padding:11px 16px;border-radius:8px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+button.alt,a.btn.alt{background:transparent;color:var(--acc)}
+.note{background:var(--warn);color:var(--warnink);border-radius:8px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.err{color:#b3261e;font-size:.9rem;min-height:1.2em;margin-top:8px}
+#letter{min-height:420px;font:14px/1.5 ui-monospace,Menlo,Consolas,monospace}
+.print-only{display:none}
+@media print{body{background:#fff;color:#000}main>*:not(.print-only){display:none}.print-only{display:block;white-space:pre-wrap;font:12pt/1.45 Georgia,serif}}
+</style>
+</head>
+<body>
+<main>
+<h1>Make your submission: Mount Peter PDA</h1>
+<p class="sub">Proposed Mount Peter PDA Development Scheme · public notification closes <b>28 October 2026</b></p>
+
+<div class="card">
+<h2>How this works</h2>
+<p style="margin:0">Fill in your details, tick the concerns you share and add a sentence or two about your own situation. A letter is written for you to check and edit. Then send it by email, or paste it into EDQ’s online portal. Nothing you type here is sent anywhere until you send it yourself.</p>
+<div class="btns"><a class="btn alt" href="https://www.yoursay.edq.qld.gov.au/mount-peter-pda" target="_blank" rel="noopener">EDQ online portal</a></div>
+</div>
+
+<div class="card">
+<h2>1. Your details</h2>
+<label for="name">Full name *</label><input type="text" id="name" autocomplete="name">
+<label for="addr">Postal address *</label><input type="text" id="addr" autocomplete="street-address">
+<div class="row"><div><label for="email">Email *</label><input type="email" id="email" autocomplete="email"></div>
+<div><label for="phone">Phone (optional)</label><input type="text" id="phone" autocomplete="tel"></div></div>
+<label for="rel">Your connection to the area</label>
+<select id="rel"><option value="a resident of Cairns">Resident of Cairns</option><option value="a resident of the Mount Peter area">Resident of the Mount Peter area</option><option value="a landowner in or near the Mount Peter PDA">Landowner in or near the PDA</option><option value="a business owner in Far North Queensland">Business owner in Far North Queensland</option><option value="a member of the Far North Queensland community">Other Far North Queensland community member</option></select>
+</div>
+
+<div class="card">
+<h2>2. Concerns you share</h2>
+<div id="concerns"></div>
+</div>
+
+<div class="card">
+<h2>3. Changes you are asking for</h2>
+<div id="requests"></div>
+</div>
+
+<div class="card">
+<h2>4. In your own words (strongly recommended)</h2>
+<label for="own">How would this affect you, your family or your street?</label>
+<textarea id="own" rows="4" placeholder="e.g. I have lived in a tropical home for 20 years and rely on breezes and shade rather than air conditioning…"></textarea>
+<label for="sec">Section or page of the Scheme you are commenting on (optional)</label>
+<input type="text" id="sec" placeholder="e.g. lot size table, setback provisions">
+<div class="note">Submissions that are personal and refer to specific parts of the Scheme are generally easier for decision-makers to act on than identical letters.</div>
+</div>
+
+<div class="card">
+<h2>5. Check, edit and send</h2>
+<textarea id="letter" spellcheck="true"></textarea>
+<div class="btns">
+<button id="copy">Copy letter</button>
+<a class="btn" id="mail" href="#" target="_blank" rel="noopener">Open in email app</a>
+<button class="alt" id="print">Print / save as PDF</button>
+<button class="alt" id="reset" style="display:none">Reset to generated text</button>
+</div>
+<div class="err" id="msg" role="status"></div>
+<div class="note" id="late" style="display:none">The closing date of 28 October 2026 has passed. Please check the EDQ page for the current status.</div>
+</div>
+</main>
+<div class="print-only" id="pr"></div>
+
+<script>
+var EDQ_EMAIL = "contact@edq.qld.gov.au"; // confirmed by the organiser
+var SUBJECT = "Submission – Proposed Mount Peter PDA Development Scheme";
+
+var CONCERNS = [
+ {id:"c0",on:true,t:"I support more housing supply in the PDA",s:"Shows the submission is constructive",
+  x:"I support the intent to increase housing supply in Far North Queensland through the Mount Peter PDA. EDQ advises the PDA will deliver around 18,500 homes for more than 42,000 people. My submission is about how the Scheme provides for tropical design as lots and dwellings become smaller and closer together."},
+ {id:"c1",on:true,t:"Orientation and cross-ventilation",s:"Small lots and narrow setbacks limit breeze paths",
+  x:"Orientation and cross-ventilation. Where lots are small and setbacks are narrow, dwellings have less scope to face prevailing breezes and to have openings on opposite sides. Cairns Regional Council’s Designing for Density in the Tropics Design Guide, which covers small lot dwellings and reconfigurations, townhouses, dual occupancy and apartments, aims to ensure future homes respond appropriately to the local climate. I ask that the Scheme’s lot and setback provisions allow homes to achieve this."},
+ {id:"c2",on:true,t:"Eaves and shading",s:"Boundary clearances limit wide eaves, awnings and hoods",
+  x:"Eaves and shading. Narrow side and boundary setbacks, and zero-lot-line configurations, can limit the width of the eaves, awnings and window hoods that shade walls and openings from sun and rain."},
+ {id:"c3",on:true,t:"Deep planting and tree canopy",s:"Little unpaved soil left for shade trees",
+  x:"Deep planting and canopy. Smaller lots can leave little unpaved, deep-soil area in which shade trees can grow to maturity."},
+ {id:"c4",on:true,t:"Urban heat",s:"Roofs, driveways and roads with limited canopy",
+  x:"Urban heat. Large areas of roof, driveway and road surface with limited tree canopy tend to hold more heat than vegetated areas. In a hot, humid climate this can raise temperatures in streets and homes."},
+ {id:"c5",on:true,t:"Household energy costs",s:"More reliance on air conditioning",
+  x:"Household energy costs. Homes that cannot be cooled passively depend more on air conditioning. This increases electricity bills and household emissions, and falls hardest on lower-income households and first-home buyers."},
+ {id:"c6",on:true,t:"Relationship to Council’s design guidance",s:"The Scheme itself needs to carry the tropical design outcomes",
+  x:"Relationship to Council guidance. EDQ advises that development in the PDA is assessed under the PDA framework rather than CairnsPlan 2016. Council’s tropical design guides are therefore unlikely to influence assessment in the PDA unless the Development Scheme carries equivalent outcomes."}
+];
+var REQUESTS = [
+ {id:"r1",on:true,t:"Include tropical design outcomes in the Scheme",x:"Incorporate the outcomes of Council’s Designing for Density in the Tropics Design Guide and Cool Homes guidance as assessment criteria for small-lot and medium-density housing."},
+ {id:"r2",on:true,t:"Minimum deep planting and setbacks",x:"Set minimum deep-planting (unpaved, deep-soil) areas and minimum setbacks that allow shade trees and eaves to be provided on each lot."},
+ {id:"r3",on:true,t:"Separation, breezeways and lightwells for small lots",x:"Where small lots are provided for, require building separation, breezeway and lightwell provisions so that homes are not built as continuous, unshaded rows."}
+];
+
+function $(i){return document.getElementById(i)}
+function build(list,host){
+ list.forEach(function(c){
+  var d=document.createElement("label");d.className="chk";d.style.fontWeight="400";d.style.margin="0";
+  d.innerHTML='<input type="checkbox" id="'+c.id+'"'+(c.on?' checked':'')+'><span><b>'+c.t+'</b>'+(c.s?'<small>'+c.s+'</small>':'')+'</span>';
+  $(host).appendChild(d);
+ });
+}
+build(CONCERNS,"concerns");build(REQUESTS,"requests");
+
+var edited=false;
+function today(){return new Date().toLocaleDateString("en-AU",{day:"numeric",month:"long",year:"numeric"})}
+function gen(){
+ var L=[],n=1;
+ L.push("The Minister for Economic Development Queensland");
+ L.push("c/- Economic Development Queensland");
+ L.push("GPO Box 2202, Brisbane QLD 4001","");
+ L.push(today(),"");
+ L.push("SUBMISSION: PROPOSED MOUNT PETER PDA DEVELOPMENT SCHEME");
+ L.push("Public notification closes 28 October 2026","");
+ L.push("Submitter: "+($("name").value||"[your name]"));
+ L.push("Address: "+($("addr").value||"[your address]"));
+ L.push("Email: "+($("email").value||"[your email]"));
+ if($("phone").value)L.push("Phone: "+$("phone").value);
+ L.push("I make this submission as "+$("rel").value+".","");
+ var c0=CONCERNS[0];
+ if($(c0.id).checked){L.push(n+". Summary");n++;L.push(c0.x,"")}
+ var cs=CONCERNS.slice(1).filter(function(c){return $(c.id).checked});
+ if(cs.length){L.push(n+". Matters of concern");n++;cs.forEach(function(c){L.push(c.x,"")})}
+ var rs=REQUESTS.filter(function(r){return $(r.id).checked});
+ if(rs.length){L.push(n+". Requested changes","I ask that the Minister consider amending the Development Scheme to:");rs.forEach(function(r,i){L.push("("+String.fromCharCode(97+i)+") "+r.x)});L.push("");n++}
+ if($("sec").value.trim()){L.push("This submission relates to: "+$("sec").value.trim()+".","")}
+ if($("own").value.trim()){L.push(n+". My circumstances");n++;L.push($("own").value.trim(),"")}
+ L.push("Thank you for considering this submission. Please advise me when the Development Scheme is finalised.","");
+ L.push("Yours sincerely","",$("name").value||"[your name]");
+ return L.join("\n");
+}
+function refresh(){
+ if(edited)return;
+ $("letter").value=gen();
+}
+document.addEventListener("input",function(e){
+ if(e.target.id==="letter"){edited=true;$("reset").style.display="inline-block";return}
+ refresh();
+});
+document.addEventListener("change",function(e){if(e.target.id!=="letter")refresh()});
+$("reset").onclick=function(){edited=false;$("reset").style.display="none";refresh()};
+
+function ok(){
+ var m=[];
+ if(!$("name").value.trim())m.push("name");
+ if(!$("addr").value.trim())m.push("address");
+ if(!/\S+@\S+\.\S+/.test($("email").value))m.push("email");
+ if(m.length){$("msg").textContent="Please add your "+m.join(", ")+" so EDQ can treat this as a properly made submission.";return false}
+ $("msg").textContent="";return true;
+}
+$("copy").onclick=function(){
+ if(!ok())return;
+ var t=$("letter").value;
+ function fb(){$("letter").select();try{document.execCommand("copy");$("msg").textContent="Copied. Paste it into your email or the EDQ portal."}catch(e){$("msg").textContent="Select all the text above and copy it manually."}}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){$("msg").textContent="Copied. Paste it into your email or the EDQ portal."},fb)}else fb();
+};
+$("mail").onclick=function(e){
+ if(!ok()){e.preventDefault();return}
+ var t=$("letter").value,body=encodeURIComponent(t);
+ var short=body.length>1800;
+ if(short){body=encodeURIComponent("[Paste your submission letter here]");$("copy").click();$("msg").textContent="Your letter is long, so it has been copied. Paste it into the email body."}
+ $("mail").href="mailto:"+EDQ_EMAIL+"?subject="+encodeURIComponent(SUBJECT)+"&body="+body;
+};
+$("print").onclick=function(){if(!ok())return;$("pr").textContent=$("letter").value;window.print()};
+if(new Date()>new Date("2026-10-28T23:59:59+10:00"))$("late").style.display="block";
+refresh();
+</script>
+</body>
+</html>
